@@ -1,5 +1,5 @@
 import { insertDocument } from "./functions/insertDocument";
-
+//mock data
 const users = [
   { id: 'user::1', name: 'Alice Smith', email: 'alice@example.com', age: 28 },
   { id: 'user::2', name: 'Bob Johnson', email: 'bob@example.com', age: 34 },
@@ -7,6 +7,8 @@ const users = [
   { id: 'user::4', name: 'Diana Ross', email: 'diana@example.com', age: 41 },
   { id: 'user::5', name: 'Evan Lee', email: 'evan@example.com', age: 30 },
 ];
+
+//function to intsert Doxument to CouchBaase
 (async () => {
  
   try {

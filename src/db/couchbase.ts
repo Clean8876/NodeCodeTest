@@ -1,7 +1,7 @@
 import { Cluster,Bucket,Collection } from "couchbase";
 import * as env from "dotenv"
 
-
+//env config 
 env.config()
 
  const COUCHBASE_URI = process.env.COUCHBASE_URI!;
@@ -15,7 +15,7 @@ let cluster: Cluster;
 let bucket: Bucket;
 let collection: Collection;
 
-
+//funtion for to initiate couchBAse
 export async function initCouchbase(): Promise<void> {
   if (!cluster) {
     cluster = await Cluster.connect(COUCHBASE_URI, {
@@ -28,7 +28,7 @@ export async function initCouchbase(): Promise<void> {
     console.log('Connected to Couchbase');
   }
 }
-
+// function for to get collection
 export function getCollection(): Collection {
   if (!collection) throw new Error('Couchbase not initialized');
   return collection;
